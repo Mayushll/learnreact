@@ -1,0 +1,30 @@
+.select{
+    align-items: center;
+    border: 1px solid rgba(50, 50, 50, 0.60);
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter, sans-serif;
+    font-size: 2vh;
+    justify-content: center;
+    line-height: 28px;
+    max-width: 100%;
+    padding: 0.3vw;
+    text-decoration: none;
+    transition: all .2s;
+
+}
+.dark{
+     background-color: rgb(159, 159, 159);
+     &:hover{
+         filter: brightness(1.1);
+     }
+ }
+.light{
+    background-color: rgb(200, 200, 200);
+    &:hover{
+        filter: brightness(0.8)
+    }
+}

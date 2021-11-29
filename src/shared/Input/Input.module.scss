@@ -1,0 +1,23 @@
+.input{
+  width: min-content;
+  border:2px solid #aaa;
+  border-radius:4px;
+  margin:8px 0;
+  outline:none;
+  padding:8px;
+  box-sizing:border-box;
+  transition: box-shadow 100ms;
+  min-width: 200px;
+}
+
+.input:focus{
+  border-color:dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
+.div {
+  width: auto;
+  visibility: hidden;
+  display: inline-block;
+  position: fixed;
+  overflow:auto;
+}

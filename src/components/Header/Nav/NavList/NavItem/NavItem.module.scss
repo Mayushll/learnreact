@@ -1,0 +1,24 @@
+.itemWhite{
+  display: flex;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  margin-left: 3vw;
+  padding: 0.5vh;
+}
+.itemWhite:hover{
+
+}
+.itemDark{
+  display: flex;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  margin-left: 3vw;
+  padding: 0.5vh;
+  color: white;
+
+}
+.itemDark:hover{
+  filter: brightness(0.8);
+}

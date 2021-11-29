@@ -1,0 +1,42 @@
+.circle{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.ubuntu{
+  font-weight: 700;
+  font-size: 4vh;
+}
+.title{
+  font-size: 4vh;
+}
+.background{
+  width: 70vw;
+  display: inline-block;
+  background-color: rgba(100, 100, 100, 0.5);
+  padding: 1vh 2vh 1vh 2vh;
+  border-radius: 20px;
+}
+.wrapper{
+  display: flex;
+  font-weight: 600;
+}
+
+.black {
+  background-color: rgb(20, 20, 20);
+}
+.white{
+  background-color: rgb(220, 220, 220);
+}
+.blue {
+ background-color: rgb(30, 144, 255);
+}
+.blackText {
+  color: rgb(20, 20, 20);
+}
+.whiteText{
+  color: rgb(220, 220, 220);
+}
+.blueText {
+  color: rgb(30, 144, 255);
+}

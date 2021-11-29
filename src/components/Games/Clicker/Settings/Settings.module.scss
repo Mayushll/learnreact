@@ -1,0 +1,14 @@
+.controls{
+  display: flex;
+  justify-content: space-between;
+  &__one{
+  }
+  &__two{
+  }
+}
+.settings{
+  margin-top: 3vh;
+  &__title{
+    text-align: center;
+  }
+}

@@ -1,0 +1,9 @@
+.url{
+  color: dodgerblue;
+  &:hover{
+    filter: brightness(0.9);
+  }
+}
+.list{
+  padding-left: 2vh;
+}

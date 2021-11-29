@@ -1,0 +1,35 @@
+.wrapper{
+  width: 70vw;
+  position: relative;
+  margin: 1vw 0 0 0;
+  transition: all 0.3s;
+  word-wrap: break-word;
+}
+.title{
+  background: rgb(200, 200, 200);
+  padding: 1.5vh;
+  position: relative;
+  border-radius: 10px;
+  z-index: 2;
+  user-select: none;
+  cursor: pointer;
+}
+.text{
+  position: relative;
+  transition: all 0.2s;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 0 0 0 5px;
+  height: 0;
+}
+.open{
+  transform: scaleY(1);
+  transform-origin: top center;
+}
+.close{
+  transform: scaleY(0);
+  opacity: 0;
+  transform-origin: top center;
+}
+
+

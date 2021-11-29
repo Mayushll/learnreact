@@ -1,0 +1,19 @@
+.post{
+  position: relative;
+}
+.deleteButton{
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.number{
+  font-size: 1.5vh;
+  position: relative;
+  top: -5px;
+  padding: 0.5vh;
+}
+
+.title{
+  font-weight: 700;
+}

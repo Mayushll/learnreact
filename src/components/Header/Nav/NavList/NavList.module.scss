@@ -1,0 +1,58 @@
+.item{
+  text-align: center;
+}
+.active{
+  animation: drop forwards;
+  animation-duration: 0.7s;
+}
+.notActive{
+  animation: redrop forwards;
+  animation-duration: 0.7s;
+}
+.wrapper{
+  padding-top: 2vh;
+}
+.burger{
+  display: block;
+  opacity: 1;
+}
+.list{
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media (max-width: 800px) {
+  .list{
+    flex-direction: row;
+    font-size: 4vw;
+    margin-top: 2vh;
+  }
+  .burger{
+    opacity: 0;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding-top: 7vh;
+    padding-right: 3vh;
+    transition: all 300ms;
+    border-bottom-left-radius: 10px;
+    border: 1px solid;
+  }
+}
+@keyframes drop {
+  0%{
+    right: -50vh;
+  }
+  100%{
+  }
+}
+@keyframes redrop {
+  0% {
+
+  }
+  100%{
+    right: -50vh;
+  }
+}

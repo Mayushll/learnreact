@@ -1,0 +1,17 @@
+.textarea{
+  min-height: 10vh;
+  min-width: 20vw;
+  max-height: 50vh;
+  max-width: 80vw;
+  &:focus{
+  outline: none;
+  border: 1px solid dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}}
+
+@media (max-width: 800px) {
+  .textarea {
+    max-height: 50vh;
+    max-width: 90vw;
+  }
+}
