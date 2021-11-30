@@ -8,6 +8,22 @@ import {Button} from "../../../shared/Button/Button";
 export const TodoForm = observer((props) => {
     const [filter, setFilter] = useState(`all`)
     const [isTodoClear, setIsTodoClear] = useState(false)
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            addNewTodo()
+        }
+    }
+    const addNewTodo = () => {
+        if (Todo.todo.name) {
+        let newTodo = {
+            ...Todo.todo, id: Date.now(), checked: false
+        }
+        Todo.addTodo(newTodo)
+    }
+        else{
+                setIsTodoClear(true)
+            }
+    }
     useEffect(
         () => {
                 Todo.AllTodos()
@@ -32,25 +48,13 @@ export const TodoForm = observer((props) => {
                 onChange={ (e) => {
                     Todo.changeTodo(e.target.value)
                     setIsTodoClear(false)
-
                 }}
                 value={Todo.todo.name}
+                onKeyDown={handleKeyDown}
             />  {isTodoClear && <span>Нужно обязательно что-то написать!</span>}
 
             <Button
-                onClick={
-                    () => {
-                        if (Todo.todo.name) {
-                            let newTodo = {
-                                ...Todo.todo, id: Date.now(), checked: false
-                            }
-                            Todo.addTodo(newTodo)
-                        }
-                        else{
-                            setIsTodoClear(true)
-                        }
-                    }
-                }
+                onClick={addNewTodo}
             >Добавить задачу</Button>
             <Select onChange={(e)=>setFilter(e.target.value)}>
                  <option value="All">Все</option>
