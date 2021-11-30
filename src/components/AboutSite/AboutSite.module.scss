@@ -10,12 +10,19 @@
 .title{
   font-size: 4vh;
 }
+.colors{
+  margin-right: 3vw;
+}
 .background{
-  width: 70vw;
-  display: inline-block;
-  background-color: rgba(100, 100, 100, 0.5);
   padding: 1vh 2vh 1vh 2vh;
   border-radius: 20px;
+  display: flex;
+}
+.light{
+  background-color: rgb(200, 200, 200);
+}
+.dark{
+  background-color: rgb(40, 40, 40);
 }
 .wrapper{
   display: flex;
@@ -39,4 +46,10 @@
 }
 .blueText {
   color: rgb(30, 144, 255);
+}
+
+.shared{
+  &>*{
+    height: 30px;
+  }
 }

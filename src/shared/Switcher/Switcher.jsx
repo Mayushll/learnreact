@@ -1,5 +1,5 @@
 import React from 'react';
-import scss from "./Switch.module.scss"
+import scss from "./Switcher.module.scss"
 import {useLocalStorage} from "../../hooks/useLocalStorage";
 
 export function Switcher(props) {

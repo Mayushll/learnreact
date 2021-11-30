@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {Switcher} from "../../shared/Switch/Switcher";
+import {Switcher} from "../../shared/Switcher/Switcher";
 import ThemeContext from "../../Context/ThemeContext";
 import {useTitle} from "../../hooks/useTitle";
 import MusicPlayer from "../../store/MusicPlayer";
