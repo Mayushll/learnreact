@@ -16,13 +16,13 @@ export function Main(props) {
     return (
             <div className={styles.wrapper}>
                 <Routes>
-                    <Route path="*"
+                    <Route path="/*"
                            element={<NotFoundComponent/>}
                     />
                     <Route path="/posts"
                            element={<Posts/>}
                     />
-                    <Route path=""
+                    <Route path="/"
                            element={<Profile/>}
                     />
                     <Route path="/settings"

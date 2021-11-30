@@ -30,13 +30,13 @@ export const NavList = observer((props) =>  {
         <div className={styles.wrapper}>
             <ul className={styles.list}>
                 <NavItem className={styles.item} post={{title: "Profile", url:""}}/>
-                <NavItem className={styles.item} post={{title: "Posts", url:"Posts"}}/>
+                <NavItem className={styles.item} post={{title: "Posts", url:"posts"}}/>
                 <NavItem className={styles.item} post={{title: "Settings", url:"Settings"}}/>
                 <NavItem className={styles.item} post={{title: "Games", url:"Games"}}/>
                      <div ref={burger} className={`${styles.burger} ${BurgerChecked.isChecked ? styles.active : styles.notActive}`}>
                         <NavItem className={styles.item} post={{title: "Todo", url:"todo"}}/>
                         <NavItem className={styles.item} post={{title: "Learning", url:"Learning"}}/>
-                        <NavItem className={styles.item} post={{title: "AboutSite", url:"AboutSite"}}/>
+                        <NavItem className={styles.item} post={{title: "AboutSite", url:"aboutSite"}}/>
                         <NavItem className={styles.item} post={{title: "404", url:"any"}}/>
                     </div>
                 <BurgerMenu/>
