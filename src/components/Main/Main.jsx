@@ -11,6 +11,7 @@ import styles from "./Main.module.scss"
 import {NotFoundComponent} from "../Not Found/NotFounsComponent";
 import {AboutSite} from "../AboutSite/AboutSite";
 import {Todo} from "../Todo/Todo";
+import {DynamicPagination} from "../Learning/DynamicPagination/DynamicPagination";
 
 export function Main(props) {
     return (
@@ -42,6 +43,9 @@ export function Main(props) {
                         />
                         <Route path="/learning/Axios"
                                element={<Axios/>}
+                        />
+                        <Route path="/learning/Pagination"
+                               element={<DynamicPagination/>}
                         />
                     </Route>
                 </Routes>

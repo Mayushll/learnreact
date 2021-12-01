@@ -58,8 +58,8 @@ export const TodoForm = observer((props) => {
             >Добавить задачу</Button>
             <Select onChange={(e)=>setFilter(e.target.value)}>
                  <option value="All">Все</option>
-                <option value="Done">Выполненные</option>
-                <option value="NotDone">Невыполненные</option>
+                 <option value="Done">Выполненные</option>
+                 <option value="NotDone">Невыполненные</option>
             </Select>
         </div>
     );

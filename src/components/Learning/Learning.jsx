@@ -11,6 +11,7 @@ export function Learning(props) {
             <div style={{display: "flex"}}>
                 <NavItem className={scss.item} post={{title: "Promises", url: "learning/promises"}}/>
                 <NavItem className={scss.item} post={{title: "Axios", url: "learning/axios"}}/>
+                <NavItem className={scss.item} post={{title: "Pagination", url: "learning/pagination"}}/>
             </div>
             <Outlet/>
         </div>

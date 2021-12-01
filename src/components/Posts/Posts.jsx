@@ -3,9 +3,10 @@ import {PostForm} from "./PostForm/PostForm";
 import {PostList} from "./PostList/PostList";
 import {PostFilter} from "./PostFilter/PostFilter";
 import {usePosts} from "../../hooks/usePosts";
-import {useLocalStorage} from "../../hooks/useLocalStorage"
+
 import {Modal} from "../../shared/Modal/Modal";
 import {Button} from "../../shared/Button/Button";
+import {useLocalStorage} from "../../hooks/useLocalStorage";
 
 export function Posts() {
     const [posts, setPosts] = useLocalStorage([], "posts") // следит за useState и добавляет посты в localStorage
