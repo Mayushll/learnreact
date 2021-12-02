@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {useAxios} from "../../../hooks/useAxios";
+import {useAxios} from "./useAxios";
 import {Inputs} from "./Inputs/Inputs";
 import {ShowData} from "./ShowData/ShowData";
 

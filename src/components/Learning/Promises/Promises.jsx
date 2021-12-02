@@ -1,5 +1,5 @@
 import React from 'react';
-import {LearnPromise} from "./Promise/LearnPromise";
+import {LearnPromise} from "./Promise/Promise";
 
 
 export function Promises(props) {

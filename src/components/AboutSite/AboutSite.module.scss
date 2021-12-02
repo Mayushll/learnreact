@@ -1,8 +1,14 @@
-.circle{
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+
+.wrapper{
+  display: flex;
+  font-weight: 600;
+  .circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
 }
+
 .ubuntu{
   font-weight: 700;
   font-size: 4vh;
@@ -24,10 +30,7 @@
 .dark{
   background-color: rgb(40, 40, 40);
 }
-.wrapper{
-  display: flex;
-  font-weight: 600;
-}
+
 
 .black {
   background-color: rgb(20, 20, 20);
