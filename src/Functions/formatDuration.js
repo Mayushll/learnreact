@@ -1,5 +1,4 @@
-
-function formatDuration (seconds) {
+export function formatDuration (seconds) {
     const timeForHuman = (name, condition) => {
         let time = 0
         while(seconds >= condition) {
@@ -43,7 +42,7 @@ function formatDuration (seconds) {
         massive = massive[0].slice(0, -2)
     }
     else if (massive.length === 0){
-        massive = "now"
+        massive = 0
     }
     else {
         massive = massive.join("")

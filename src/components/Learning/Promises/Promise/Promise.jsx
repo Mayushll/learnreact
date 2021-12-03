@@ -3,7 +3,7 @@ import {Input} from "../../../../shared/Input/Input";
 import {PromiseText} from "./PromiseText/PromiseText";
 
 export function LearnPromise() {
-    const [textPromise, setTextPromise] = useState("")
+    const [seconds, setSeconds] = useState("")
     const [textResolve, setTextResolve] = useState("")
     const [textRejected, setTextRejected] = useState("")
     const [isFirst, setIsFirst] = useState(true)
@@ -20,7 +20,7 @@ export function LearnPromise() {
                             reject()
                         }
                         resolve()
-                    }, textPromise * 1000)
+                    }, seconds * 1000)
             })
         }
         promise().then(() => {
@@ -28,7 +28,7 @@ export function LearnPromise() {
             setTimeout(() => {setTextResolve("")}, 1000
             )
         })
-        promise().catch( () => {
+        promise().catch( (e) => {
             setTextRejected("ОШИБКА")
             setTimeout(() => {setTextRejected("")}, 1000
             )
@@ -36,20 +36,20 @@ export function LearnPromise() {
         return () => {
             
         }
-    }, [textPromise, isFirst])
+    }, [seconds, isFirst])
     return (
         <div>
-            <div>Настраиваем таймер для Promise</div>
+            <div>Настраиваем таймер для Promise <br />(функцию для перевода секунд в текст взял со своего CodeWars)</div>
             <Input
                  onChange={(e) => {
-                     setTextPromise(e.target.value)
+                     setSeconds(e.target.value)
                  }}
-                 value={textPromise}
+                 value={seconds}
                  checked=""
                  placeholder="Таймер для Promise"
             />
             <PromiseText
-                textPromise={textPromise}
+                seconds={seconds}
                 textResolve={textResolve}
                 textRejected={textRejected}
             />
