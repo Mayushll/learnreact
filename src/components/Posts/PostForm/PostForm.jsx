@@ -11,7 +11,18 @@ export function PostForm({createPost, posts}) {
     })
     const [isBodyClear, setIsBodyClear] = useState(false)
     const [isTitleClear, setIsTitleClear] = useState(false)
-
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            addPost(e)
+        }
+    }
+    function addPost (e) {
+        post.title ? setIsTitleClear(false) : setIsTitleClear(true) // Проверка на наличие введенных данных.
+        post.body ? setIsBodyClear(false) :  setIsBodyClear(true)
+        if (post.title && post.body) {
+            addNewPost(e, post, setPost, createPost, posts)
+        }
+    }
     return (
         <form>
             {isTitleClear && <div>Нужно обязательно что-то написать!</div>}
@@ -25,7 +36,9 @@ export function PostForm({createPost, posts}) {
                         title: e.target.value
                     })
                 }
+
                 }
+                onKeyDown={handleKeyDown}
                 type="text"
             />
             {isBodyClear && <div>Нужно обязательно что-то написать!</div>}
@@ -41,15 +54,12 @@ export function PostForm({createPost, posts}) {
                 })
                 }
                 }
+                onKeyDown={handleKeyDown}
             />
             <Button
                 onClick={(e) => {
                     e.preventDefault()
-                    post.title ? setIsTitleClear(false) : setIsTitleClear(true) // Проверка на наличие введенных данных.
-                    post.body ? setIsBodyClear(false) :  setIsBodyClear(true)
-                    if (post.title && post.body) {
-                        addNewPost(e, post, setPost, createPost, posts)
-                    }
+                    addPost(e)
                 } // функция добавляет пост по полям в инпутах
                 }>
                 Добавить пост
