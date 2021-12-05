@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import {Input} from "../../../../shared/Input/Input";
 import {PromiseText} from "./PromiseText/PromiseText";
+import {Button} from "../../../../shared/Button/Button";
 
 export function LearnPromise() {
     const [seconds, setSeconds] = useState("")
+    const [value, setValue] = useState(0)
     const [textResolve, setTextResolve] = useState("")
     const [textRejected, setTextRejected] = useState("")
     const [isFirst, setIsFirst] = useState(true)
@@ -25,7 +27,8 @@ export function LearnPromise() {
         }
         promise().then(() => {
             setTextResolve("Сработало")
-            setTimeout(() => {setTextResolve("")}, 1000
+            setTimeout(() => {setTextResolve("")
+                }, 1000
             )
         })
         promise().catch( (e) => {
@@ -41,18 +44,22 @@ export function LearnPromise() {
         <div>
             <div>
                 <p>
-                    Настраиваем таймер для Promise <br />
-                    Функцию для перевода секунд в текст взял со своего <a href="https://www.codewars.com/users/MayushiiChan/stats">CodeWars</a>)
+                    Функцию для перевода секунд в текст взял со своего <a href="https://www.codewars.com/users/MayushiiChan/stats">CodeWars</a>. < br/>
+                    Завел недавно, но стараюсь там сидеть. <br />
+                    <br />
+                    <b> Настраиваем таймер для Promise </b> <br />
                 </p>
             </div>
             <Input
                  onChange={(e) => {
-                     setSeconds(e.target.value)
+                     setValue(e.target.value)
                  }}
-                 value={seconds}
+                 value={value}
+                 maxlength="10"
                  checked=""
                  placeholder="Таймер для Promise"
             />
+            <Button onClick={ () => setSeconds(value)}>Отправить запрос</Button>
             <PromiseText
                 seconds={seconds}
                 textResolve={textResolve}

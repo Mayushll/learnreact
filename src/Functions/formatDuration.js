@@ -47,7 +47,5 @@ export function formatDuration (seconds) {
     else {
         massive = massive.join("")
     }
-    console.log(massive)
     return massive
 }
-formatDuration()

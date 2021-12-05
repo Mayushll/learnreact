@@ -1,5 +1,4 @@
 import React from 'react';
-import {Button} from "../../../../shared/Button/Button";
 import {observer} from "mobx-react-lite";
 import styles from "./TodoItem.module.scss"
 import {DeleteButton} from "../../../../shared/DeleteButton/DeleteButton";
