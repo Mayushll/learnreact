@@ -1,5 +1,15 @@
 .avatar{
   width: 15vh;
+  margin-right: 15px;
+  z-index: 999999;
+  border-color:dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+  &:hover{
+    position: relative;
+    animation-name: closer;
+    animation-duration: 0.5s;
+    transform: scale(2)translateY(25%);
+  }
 }
 .profile{
   display: flex;
@@ -8,5 +18,13 @@
   color: dodgerblue;
   &:hover{
     filter: brightness(0.9);
+  }
+}
+
+@media (max-width: 800px) {
+  .avatar {
+    &:hover {
+      transform: scale(2) translateY(25%) translateX(25%);
+    }
   }
 }

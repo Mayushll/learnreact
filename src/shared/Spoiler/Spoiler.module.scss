@@ -32,4 +32,8 @@
   transform-origin: top center;
 }
 
-
+@media(max-width: 800px){
+  .wrapper {
+    width: 90vw;
+  }
+}
