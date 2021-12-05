@@ -37,7 +37,6 @@ export const NavList = observer((props) =>  {
                         <NavItem className={styles.item} post={{title: "Todo", url:"todo"}}/>
                         <NavItem className={styles.item} post={{title: "Learning", url:"Learning"}}/>
                         <NavItem className={styles.item} post={{title: "AboutSite", url:"aboutSite"}}/>
-                        <NavItem className={styles.item} post={{title: "404", url:"any"}}/>
                     </div>
                 <BurgerMenu/>
             </ul>

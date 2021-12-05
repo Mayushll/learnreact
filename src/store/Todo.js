@@ -27,22 +27,19 @@ class Todo {
         this.todo.name = ""
     }
     removeTodo (id) {
-       this.list = this.list.filter(todo => todo.id !== id)
+        this.list = this.list.filter(todo => todo.id !== id)
     }
     checkedTodo(todo){
         todo.checked = !todo.checked
     }
     AllTodos(){
         this.filteredList = this.list
-        console.log(this.filteredList)
     }
     CheckedTodos(){
         this.filteredList = this.list.filter(todo => todo.checked)
-        console.log(this.filteredList)
     }
     NotCheckedTodos(){
         this.filteredList = this.list.filter(todo => !todo.checked)
-        console.log(this.filteredList)
     }
 }
 

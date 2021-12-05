@@ -8,7 +8,7 @@ import {Promises} from "../Learning/Promises/Promises";
 import {Posts} from "../Posts/Posts";
 import {Axios} from "../Learning/Axios/Axios";
 import styles from "./Main.module.scss"
-import {NotFoundComponent} from "../Not Found/NotFounsComponent";
+import {NotFoundComponent} from "../NotFound/NotFound";
 import {AboutSite} from "../AboutSite/AboutSite";
 import {Todo} from "../Todo/Todo";
 import {DynamicPagination} from "../Learning/DynamicPagination/DynamicPagination";

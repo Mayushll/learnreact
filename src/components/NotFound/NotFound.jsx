@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
-import NotFoundWhite from "./NotFoundWhite.png"
-import NotFoundBlack from "./NotFoundBlack.png"
+import NotFoundWhite from "./images/NotFoundWhite.webp"
+import NotFoundBlack from "./images/NotFoundBlack.webp"
 import ThemeContext from "../../Context/ThemeContext";
 export function NotFoundComponent(props) {
     const contextTheme = useContext(ThemeContext)
