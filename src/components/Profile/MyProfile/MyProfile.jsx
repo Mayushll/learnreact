@@ -1,15 +1,30 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import avatar from "./Avatar.webp"
 import styles from "./MyProfile.module.scss"
 import {getAge} from "../../../Functions/getAge";
 import {Spoilers} from "./Spoilers/Spoilers";
 export const MyProfile = () => {
+    const [avatarScope, setAvatarScope] = useState(false)
+    useEffect(
+        () => {
+            document.documentElement.addEventListener("click", ()=>setAvatarScope(false))
+            return () => {
+                document.documentElement.removeEventListener("click", ()=>setAvatarScope(false))
+            }
+        }
+    )
     return (
         <div>
             <div className={styles.profile}>
                 <div>
                     <img
-                        className={styles.avatar} src={avatar} alt="Аватар"/>
+                        onClick={(e) => {
+                            e.stopPropagation()
+                            setAvatarScope(!avatarScope)
+                        }
+                        }
+                        className={avatarScope ? styles.avatarScope : styles.avatar} src={avatar} alt="Аватар"
+                    />
                 </div>
                 <div>
                     <span> <b> Возьмите на работу пожалуйста </b> </span><br/>

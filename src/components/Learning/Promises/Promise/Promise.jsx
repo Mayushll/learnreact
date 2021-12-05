@@ -39,7 +39,12 @@ export function LearnPromise() {
     }, [seconds, isFirst])
     return (
         <div>
-            <div>Настраиваем таймер для Promise <br />(функцию для перевода секунд в текст взял со своего CodeWars)</div>
+            <div>
+                <p>
+                    Настраиваем таймер для Promise <br />
+                    Функцию для перевода секунд в текст взял со своего <a href="https://www.codewars.com/users/MayushiiChan/stats">CodeWars</a>)
+                </p>
+            </div>
             <Input
                  onChange={(e) => {
                      setSeconds(e.target.value)

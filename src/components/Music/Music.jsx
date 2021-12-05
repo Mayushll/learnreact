@@ -14,7 +14,7 @@ export const Music = observer((props) => {
 
             <div>
                 {MusicPlayer.isVisible ? <div>
-                        <audio style={{color: "black"}} autoPlay controls onEnded={() => {
+                        <audio volume="0.1" style={{color: "black"}} autoPlay controls onEnded={() => {
                             if (activeSong < songs.length - 1) {
                                 setActiveSong(activeSong + 1)
                             }

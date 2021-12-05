@@ -8,8 +8,6 @@ export function Spoiler(props) {
     const div = useRef()
     const contextTheme = useContext(ThemeContext)
     const [height, setHeight] = useState()
-
-
     useEffect (
         () => {
             setHeight(div.current.clientHeight)
@@ -17,7 +15,6 @@ export function Spoiler(props) {
     )
     useEffect(
         () => {
-            console.log("1ef")
             if(!isOpen) {
                 spoiler.current.style.height = "7vh"
                 div.current.style.height = 0

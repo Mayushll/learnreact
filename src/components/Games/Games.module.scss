@@ -1,0 +1,9 @@
+.clicker{
+  font-size: 3vh;
+  font-weight: 700;
+  color: dodgerblue;
+  cursor: pointer;
+  &:hover{
+    filter: brightness(0.9);
+  }
+}

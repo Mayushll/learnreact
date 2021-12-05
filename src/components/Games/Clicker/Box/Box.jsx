@@ -13,7 +13,6 @@ export const Box = (({position, setPosition, clickListener1, clickListener2, set
     const kirito = useRef(null)
     const asuna = useRef(null)
     const lizbeth = useRef(null)
-    console.log("Render")
     useScore(position, setPosition, kirito, lizbeth, asuna, clickListener1, clickListener2, setClickListener1, setClickListener2, setScore1, setScore2, score1, score2)
     return (
         <div>

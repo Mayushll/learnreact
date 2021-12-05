@@ -25,7 +25,7 @@ export function PostForm({createPost, posts}) {
     }
     return (
         <form>
-            {isTitleClear && <div>Нужно обязательно что-то написать!</div>}
+            {isTitleClear && <div style={{color: "red"}}>Нужно обязательно что-то написать!</div>}
             Название поста
             <Input  // меняет заголовок поста на введенное в Input значение
                 value={post.title}
@@ -41,7 +41,7 @@ export function PostForm({createPost, posts}) {
                 onKeyDown={handleKeyDown}
                 type="text"
             />
-            {isBodyClear && <div>Нужно обязательно что-то написать!</div>}
+            {isBodyClear && <div style={{color: "red"}}>Нужно обязательно что-то написать!</div>}
             Содержание поста <br />
             <TextArea  // меняет текст поста на введенное в Input значение
                 style={{width: "50vh", height: "50vh"}}

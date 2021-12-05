@@ -1,10 +1,10 @@
 import React from 'react';
 import {Input} from "../../../shared/Input/Input";
 import {Selector} from "./Selector/Selector";
-
+import styles from "./PostFilter.module.scss"
 export function PostFilter({filter, setFilter}) {
     return (
-        <div>
+        <div className={styles.filter}>
             <Input
                 value={filter.query}
                 onChange={e => setFilter({...filter, query: e.target.value})} // изменяет запрос на значение, введенное в Input

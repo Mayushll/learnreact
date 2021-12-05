@@ -4,6 +4,7 @@ import {Select} from "../../../shared/Select/Select";
 import Todo from "../../../store/Todo";
 import {observer} from "mobx-react-lite";
 import {Button} from "../../../shared/Button/Button";
+import styles from "./TodoForm.module.scss"
 
 export const TodoForm = observer((props) => {
     const [filter, setFilter] = useState(`all`)
@@ -38,7 +39,7 @@ export const TodoForm = observer((props) => {
                         Todo.NotCheckedTodos()
                         break
                     default:
-                        console.log("WARNING")
+                        return
                 }
         }, [filter, Todo.list]
     )
@@ -51,16 +52,19 @@ export const TodoForm = observer((props) => {
                 }}
                 value={Todo.todo.name}
                 onKeyDown={handleKeyDown}
-            />  {isTodoClear && <span>Нужно обязательно что-то написать!</span>}
+            />  {isTodoClear && <span style={{color: "red"}}>Нужно обязательно что-то написать!</span>}
 
             <Button
                 onClick={addNewTodo}
             >Добавить задачу</Button>
-            <Select onChange={(e)=>setFilter(e.target.value)}>
-                 <option value="All">Все</option>
-                 <option value="Done">Выполненные</option>
-                 <option value="NotDone">Невыполненные</option>
-            </Select>
+            <div className={styles.filter}>
+                <Select
+                    onChange={(e)=>setFilter(e.target.value)}>
+                     <option value="All">Все</option>
+                     <option value="Done">Выполненные</option>
+                     <option value="NotDone">Невыполненные</option>
+                </Select>
+            </div>
         </div>
     );
 })

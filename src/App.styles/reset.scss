@@ -43,8 +43,11 @@ ol[class] {
 }*/
 
 a {
-  color: inherit;
+  color: dodgerblue;
   text-decoration: none;
+  &:hover{
+    filter: brightness(0.9);
+  }
 }
 
 

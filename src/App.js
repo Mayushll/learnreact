@@ -12,13 +12,13 @@ export function App(props) {
 
     useEffect(
         () => {
-            let body = document.querySelector("html")//так делать нельзя скоро уберу
+            let body = document.querySelector("html")//так делать нельзя, но пока не знаю как избавится
             body.style.backgroundColor = contextTheme?.theme === "light" ? "rgb(220, 220, 220)" : "rgb(20, 20, 20)"
         }
     )
         return (
                 <div className="App"
-                    style={contextTheme?.theme === "light" ? lightTheme : darkTheme} /* определяем тему в зависимости от значения в контексте */>
+                    style={contextTheme?.theme === "light" ? lightTheme : darkTheme}>
                     <Wrapper/>
                     <Music/>
                 </div>
