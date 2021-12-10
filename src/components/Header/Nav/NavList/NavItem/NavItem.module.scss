@@ -3,8 +3,8 @@
   font-weight: bold;
   text-align: center;
   justify-content: center;
-  margin-left: 3vw;
   padding: 0.5vh;
+  cursor: pointer;
 }
 .itemWhite:hover{
 
@@ -14,11 +14,14 @@
   font-weight: bold;
   text-align: center;
   justify-content: center;
-  margin-left: 3vw;
   padding: 0.5vh;
   color: white;
-
+  cursor: pointer;
 }
 .itemDark:hover{
   filter: brightness(0.8);
+}
+
+@media (max-width: 830px) {
+
 }

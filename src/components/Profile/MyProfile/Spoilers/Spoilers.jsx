@@ -8,9 +8,9 @@ export function Spoilers(props) {
             <Spoiler title="Hard-skills">
                 <b> Умею пользоваться: </b>
                 <ul className={styles.list}>
-                    <li> HTML (БЭМ, адаптивная верстка) </li>
+                    <li> HTML (БЭМ, адаптивная-кроссбраузерная верстка) </li>
                     <li> CSS (SASS/SCSS/module) </li>
-                    <li> JS </li>
+                    <li> JS (ES6+)</li>
                     <li> React </li>
                     <li> MobX </li>
                     <li> Redux </li>
@@ -32,9 +32,9 @@ export function Spoilers(props) {
             </Spoiler>
             <Spoiler title="Soft-skills">
                 <ul className={styles.list}>
-                    <li> Дружелюбный. </li>
-                    <li> Трудолюбивый. </li>
-                    <li> Общительный. </li>
+                    <li> Дружелюбный. Люблю всех людей.</li>
+                    <li> Трудолюбивый и пунктуальный, если чувствую ответветственность за что-то.</li>
+                    <li> Общительный. Интроверт, но при необходимости легко нахожу общий язык и общаюсь с кем угодно.</li>
                     <li> Cтрессоустойчивый.  </li>
                     <li> Иногда смешно шучу.  </li>
                 </ul>

@@ -1,5 +1,5 @@
 .item{
-  text-align: center;
+
 }
 .active{
   animation: drop forwards;
@@ -19,14 +19,26 @@
 .list{
   display: flex;
   flex-direction: column;
-}
+  &__main{
+    display: flex;
+    flex-direction: column;
+    &>*{
 
+    }
+  }
+}
 
 @media (max-width: 830px) {
   .list{
     flex-direction: row;
     font-size: 4vw;
     margin-top: 2vh;
+    &__main{
+      flex-direction: row;
+      &>*{
+        margin-right: 3vw;
+      }
+    }
   }
   .burger{
     opacity: 0;
@@ -34,11 +46,13 @@
     position: fixed;
     top: 0;
     right: 0;
-    padding-top: 7vh;
-    padding-right: 3vh;
+    padding: 7vh 2vh 0 2vh;
     transition: all 300ms;
     border-bottom-left-radius: 10px;
     border: 1px solid;
+  }
+  .burgerItem{
+    margin: 0;
   }
 }
 @keyframes drop {

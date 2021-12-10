@@ -6,6 +6,7 @@
 .header{
   position: relative;
   height: 99vh;
+  z-index: 10;
 }
 @media(max-width: 830px){
   .header{

@@ -9,7 +9,7 @@ export function NavItem(props) {
     const contextTheme = useContext(ThemeContext)
     return (
         <div>
-            <NavLink   className={
+            <NavLink className={
                 contextTheme.theme === "dark"
                     ? styles.itemDark
                     : styles.itemWhite
