@@ -1,7 +1,14 @@
 import {makeAutoObservable} from "mobx";
 
 class Theme {
-    theme = false
+    lightTheme = {
+        color: "rgb(20, 20, 20)",
+        background: "rgb(220, 220, 220)",
+    }
+    darkTheme = {
+        color: "rgb(220, 220, 220)",
+        background: "rgb(20, 20, 20)",
+    }
     constructor() {
         makeAutoObservable(this)
     }

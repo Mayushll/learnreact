@@ -20,11 +20,24 @@
   user-select: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 830px) {
   .button {
     display: block;
   }
 }
+@media (max-width: 350px) {
+  .button {
+    transform: scale(0.8);
+    right: 10px;
+    top: 10px;
+  }
+}
+
+
+
+
+
+
 
 .span + .span {
   margin-top: 3px;

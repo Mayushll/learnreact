@@ -57,7 +57,7 @@ export function LearnPromise() {
                  value={value}
                  maxlength="10"
                  checked=""
-                 placeholder="Таймер для Promise"
+                 placeholder="Таймер"
             />
             <Button onClick={ () => setSeconds(value)}>Отправить запрос</Button>
             <PromiseText
