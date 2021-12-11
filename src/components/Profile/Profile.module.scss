@@ -1,6 +1,43 @@
+.avatar{
+  width: 16vh;
+  margin-right: 15px;
+  border-color:dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+  cursor: pointer;
+}
+.name{
+  font-weight: 700;
+  font-size: 2.5vh;
+}
+.avatarScope{
+  width: 16vh;
+  margin-right: 15px;
+  z-index: 999999;
+  border-color:dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+  position: relative;
+  animation-name: closer;
+  animation-duration: 0.5s;
+  transform: scale(2)translateY(25%);
+  cursor: pointer;
+}
+.profile{
+  display: flex;
+}
 .url{
   color: dodgerblue;
   &:hover{
     filter: brightness(0.9);
+  }
+}
+
+@media (max-width: 830px) {
+  .avatarScope {
+      transform: scale(2) translateY(25%) translateX(25%);
+    }
+  }
+@media (max-width: 830px)and(max-height: 450px) {
+  .avatar{
+    width: 15vw;
   }
 }

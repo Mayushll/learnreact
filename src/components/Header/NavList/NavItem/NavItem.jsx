@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import styles from "./NavItem.module.scss";
 import {NavLink} from "react-router-dom";
-import ThemeContext from "../../../../../Context/ThemeContext";
+import ThemeContext from "../../../../Context/ThemeContext";
 
 
 

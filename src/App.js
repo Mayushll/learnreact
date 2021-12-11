@@ -6,6 +6,7 @@ import "./App.styles/fonts.scss"
 import "./App.styles/reset.scss"
 import ThemeContext from "./Context/ThemeContext";
 import {Music} from "./components/Music/Music";
+import MediaQuery from "./store/MediaQuery";
 
 export function App(props) {
     const contextTheme = useContext(ThemeContext)
@@ -26,21 +27,21 @@ export function App(props) {
                 body.style.backgroundColor = contextTheme?.theme === "light" ? "rgb(220, 220, 220)" : "rgb(20, 20, 20)"
             }
         )
-        useEffect(
-            () => {
-                document.documentElement.addEventListener("keydown", (e)=>{
-                        if (e.key === "F12") {
-                            setTimeout(() => window.location.reload(), 600) //для удобства работы с панелью разработчика
-                        }
-                });
-            }
-        )
+
+    useEffect(() => {
+            window.addEventListener('resize', MediaQuery.matchQuery)
+            return () => window.removeEventListener('resize', MediaQuery.matchQuery)
+        }, [MediaQuery.matchQuery]
+    )
+
+
 
         return (
                 <div className="App"
                     style={contextTheme?.theme === "light" ? lightTheme : darkTheme}>
                     <Wrapper/>
                     <Music/>
+
                 </div>
         );
 }

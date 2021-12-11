@@ -1,5 +1,5 @@
 import React from 'react';
-import {Spoiler} from "../../../../shared/Spoiler/Spoiler";
+import {Spoiler} from "../../../shared/Spoiler/Spoiler";
 import styles from "./Spoilers.module.scss"
 
 export function Spoilers(props) {

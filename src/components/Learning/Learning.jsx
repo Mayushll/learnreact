@@ -1,6 +1,6 @@
 import React from 'react';
 import {useTitle} from "../../hooks/useTitle";
-import {NavItem} from "../Header/Nav/NavList/NavItem/NavItem";
+import {NavItem} from "../Header/NavList/NavItem/NavItem";
 import {Outlet} from "react-router-dom"
 import styles from "./Learning.module.scss"
 

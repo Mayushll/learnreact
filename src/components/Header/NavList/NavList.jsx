@@ -1,11 +1,10 @@
-import React, {useContext, useEffect, useRef} from 'react';
+import React, {useContext, useEffect, useRef, useState} from 'react';
 import styles from "./NavList.module.scss"
 import {NavItem} from "./NavItem/NavItem";
-import {BurgerMenu} from "../../../../shared/BurgerMenu/BurgerMenu";
-import BurgerChecked from "../../../../store/BurgerChecked";
+import {BurgerMenu} from "../../../shared/BurgerMenu/BurgerMenu";
+import BurgerChecked from "../../../store/BurgerChecked";
 import {observer} from "mobx-react-lite";
-import ThemeContext from "../../../../Context/ThemeContext";
-
+import ThemeContext from "../../../Context/ThemeContext";
 
 export const NavList = observer((props) =>  {
     const burger = useRef()
@@ -18,6 +17,8 @@ export const NavList = observer((props) =>  {
             }
         }, [BurgerChecked.isChecked]
     )
+
+
     useEffect(
         () => {
             if (document.documentElement.clientWidth < 800) {

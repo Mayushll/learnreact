@@ -6,7 +6,7 @@ export function ShowData({data, loading}) {
 
     return (
         <div>
-            {loading ? <Loading styles/> : null}
+            {loading ? <Loading /> : null}
             {data ? <Data data={data} loading={loading}/> : null}
 
         </div>

@@ -1,12 +1,15 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import styles from "./DynamicPagination.module.scss"
+import {Loading} from "../../../shared/Loading/Loading";
 
 export const DynamicPagination = (props) => {
     const [photos, setPhotos] = useState([])
     const [currentPage, setCurrentPage] = useState(1)
     const [fetching, setFetching] = useState(true)
+    const [loading, setLoading] = useState(false)
     useEffect(() => {
+        setLoading(true)
             if (fetching) {
                 axios.get(`https://jsonplaceholder.typicode.com/photos?_limit=10&_page=${currentPage}`)
                     .then(response => {
@@ -14,8 +17,13 @@ export const DynamicPagination = (props) => {
                             setCurrentPage(prevState => prevState + 1)
                         }
                     )
+                    .then(
+                        setLoading(false)
+                    )
+
                     .finally(() => setFetching(false))
                  }
+
 
     }, [fetching]
     )
@@ -54,7 +62,9 @@ export const DynamicPagination = (props) => {
                         </div>
                     </div>
             )}
+            {loading ? <Loading /> : null}
         </div>
+
     );
 }
 
