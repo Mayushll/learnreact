@@ -5,9 +5,10 @@
   justify-content: center;
   padding: 0.5vh;
   cursor: pointer;
-}
-.itemWhite:hover{
-
+  color: rgb(20, 20, 20);
+  &:hover{
+    filter: invert(40%)
+  }
 }
 .itemDark{
   display: flex;
@@ -17,11 +18,7 @@
   padding: 0.5vh;
   color: white;
   cursor: pointer;
-}
-.itemDark:hover{
-  filter: brightness(0.8);
-}
-
-@media (max-width: 830px) {
-
+  &:hover{
+      filter: brightness(0.8);
+    }
 }

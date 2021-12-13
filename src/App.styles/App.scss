@@ -1,3 +1,12 @@
 .App{
   min-height: 100vh;
 }
+.active{
+  color:rgb(30, 144, 255);
+  &:hover{
+    filter: brightness(0.8);
+  }
+}
+a:not([class]){
+  color: dodgerblue;
+}

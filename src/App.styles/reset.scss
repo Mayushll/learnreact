@@ -6,13 +6,6 @@
   transition: background-color 0.5s;
 }
 
-/*ul[class],
-ol[class] {
-  padding: 0;
-}*/
-[tabindex] {
-
-}
 body,
 h1,
 h2,
@@ -37,20 +30,9 @@ body {
   font-family: Ubuntu, sans-serif;
 }
 
-/*ul[class],
-ol[class] {
-  list-style: none;
-}*/
-
-a {
-  color: dodgerblue;
+a{
   text-decoration: none;
-  &:hover{
-    filter: brightness(0.9);
-  }
 }
-
-
 img {
   max-width: 100%;
   display: block;
