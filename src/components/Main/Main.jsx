@@ -12,6 +12,7 @@ import {NotFoundComponent} from "../NotFound/NotFound";
 import {AboutSite} from "../AboutSite/AboutSite";
 import {Todo} from "../Todo/Todo";
 import {DynamicPagination} from "../Learning/DynamicPagination/DynamicPagination";
+import {Music} from "../Music/Music";
 
 export function Main(props) {
     return (

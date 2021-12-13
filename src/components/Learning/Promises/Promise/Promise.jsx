@@ -9,6 +9,7 @@ export function LearnPromise() {
     const [textResolve, setTextResolve] = useState("")
     const [textRejected, setTextRejected] = useState("")
     const [isFirst, setIsFirst] = useState(true)
+
     useEffect( () => {
         if (isFirst) {
             setIsFirst(false);
@@ -60,6 +61,7 @@ export function LearnPromise() {
                  placeholder="Таймер"
             />
             <Button onClick={ () => setSeconds(value)}>Отправить запрос</Button>
+
             <PromiseText
                 seconds={seconds}
                 textResolve={textResolve}

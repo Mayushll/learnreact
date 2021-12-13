@@ -1,6 +1,14 @@
 audio::-webkit-media-controls-panel{
   background-color: gray;
 }
-
-
+.MusicPlayer{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+@media(max-width: 830px){
+  .MusicPlayer{
+    display: none;
+  }
+}
 

@@ -41,7 +41,6 @@ export function App(props) {
                     style={contextTheme?.theme === "light" ? lightTheme : darkTheme}>
                     <Wrapper/>
                     <Music/>
-
                 </div>
         );
 }
