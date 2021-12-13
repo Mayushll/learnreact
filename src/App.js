@@ -7,8 +7,14 @@ import "./App.styles/reset.scss"
 import ThemeContext from "./Context/ThemeContext";
 import {Music} from "./components/Music/Music";
 import MediaQuery from "./store/MediaQuery";
+import {debounce} from "./Functions/debounce";
 
 export function App(props) {
+
+    function reload() {
+        window.location.reload()
+    }
+    reload = debounce(reload, 300)
     const contextTheme = useContext(ThemeContext)
         useEffect(
             () => {
@@ -29,11 +35,10 @@ export function App(props) {
         )
 
     useEffect(() => {
-            window.addEventListener('resize', MediaQuery.matchQuery)
-            return () => window.removeEventListener('resize', MediaQuery.matchQuery)
-        }, [MediaQuery.matchQuery]
+            window.addEventListener('resize', reload)
+            return () => window.removeEventListener('resize', reload)
+        }, []
     )
-
 
 
         return (

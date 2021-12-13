@@ -1,3 +1,4 @@
+/*
 import {makeAutoObservable} from "mobx";
 
 class MediaQuery {
@@ -7,8 +8,8 @@ class MediaQuery {
     }
     matchQuery (){
         this.mQuery = window.matchMedia("(max-width: 830px)").matches
-        console.log(this.mQuery)
+        this.mQuery ?
     }
 }
 
-export default new MediaQuery()
+export default new MediaQuery()*/
